@@ -33,4 +33,7 @@
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
         </property>
     </bean>
+    
+    <bean id="stockDaoImpl" class="my.samples.hibernatespring.dao.StockDaoImpl">
+    </bean>
 </beans>
