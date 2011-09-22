@@ -24,9 +24,9 @@ public class App {
         person.setName("Ahmad Mirzaei");
         person.addStock(new Stock(10));
         person.addStock(new Stock(20));
-        personDao.save(person);
-
-        Person newPerson = personDao.findById(Person.class, 1);
+        person = (Person)personDao.save(person);
+        System.out.println(person);
+        Person newPerson = personDao.findById(Person.class, person.getId());
         System.out.println(newPerson);
     }
 }
