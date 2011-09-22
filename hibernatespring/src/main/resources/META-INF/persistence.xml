@@ -5,6 +5,7 @@
 	<persistence-unit name="simple-jpa" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<class> my.samples.hibernatespring.data.Stock</class>
+        <class> my.samples.hibernatespring.data.Person</class>
         
         <exclude-unlisted-classes/>
 		<properties>

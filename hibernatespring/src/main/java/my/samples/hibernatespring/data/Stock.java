@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -12,7 +13,15 @@ import javax.persistence.Table;
 public class Stock {
     private Integer stockId;
     private Integer price;
+    private Person person;
 
+    public Stock() {
+    	
+    }
+    
+    public Stock(Integer price) {
+    	this.price = price;
+    }
     @SuppressWarnings("unused")
     private void setStockId(Integer stockId) {
         this.stockId = stockId;
@@ -63,5 +72,14 @@ public class Stock {
             return false;
         return true;
     }
+
+	@ManyToOne
+    public Person getPerson() {
+		return person;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
+	}
 
 }

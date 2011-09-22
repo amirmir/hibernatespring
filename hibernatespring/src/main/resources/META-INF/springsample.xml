@@ -36,4 +36,6 @@
     
     <bean id="stockDaoImpl" class="my.samples.hibernatespring.dao.StockDaoImpl">
     </bean>
+     <bean id="personDaoImpl" class="my.samples.hibernatespring.dao.PersonDaoImpl">
+    </bean>
 </beans>
