@@ -28,7 +28,9 @@
     	  p:dataSource-ref="dataSource"
           p:persistenceUnitName="simple-jpa">
         <property name="jpaVendorAdapter">
-            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+            	<property name="generateDdl" value="true" />
+            </bean>
         </property>
     </bean>
     

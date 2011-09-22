@@ -21,10 +21,14 @@ public class StockDaoImpl {
 		this.em = em;
 	}
 	
-	/**
+    /**
      * Find Stock.
      */
     public Stock findStockById(Integer id) {
         return em.find(Stock.class, id);
+    }
+
+    public void save(Stock stock) {
+        em.persist(stock);
     }
 }

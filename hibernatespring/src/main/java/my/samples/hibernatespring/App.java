@@ -1,6 +1,7 @@
 package my.samples.hibernatespring;
 
 import my.samples.hibernatespring.dao.StockDaoImpl;
+import my.samples.hibernatespring.data.Stock;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -16,6 +17,12 @@ public class App
     {
         ApplicationContext context = new ClassPathXmlApplicationContext(new String[] { "META-INF/springsample.xml" });
         StockDaoImpl stockDao = (StockDaoImpl) context.getBean("stockDaoImpl");
-        stockDao.findStockById(1);
+
+        Stock saveStock = new Stock();
+        saveStock.setPrice(10);
+        stockDao.save(saveStock);
+
+        Stock newStock = stockDao.findStockById(1);
+        System.out.println(newStock);
     }
 }
