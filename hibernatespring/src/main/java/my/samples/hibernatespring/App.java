@@ -22,7 +22,7 @@ public class App
         saveStock.setPrice(10);
         stockDao.save(saveStock);
 
-        Stock newStock = stockDao.findStockById(1);
+        Stock newStock = stockDao.findById(Stock.class, 1);
         System.out.println(newStock);
     }
 }

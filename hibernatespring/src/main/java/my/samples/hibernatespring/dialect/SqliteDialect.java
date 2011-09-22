@@ -1,4 +1,4 @@
-package my.samples.hibernatespring;
+package my.samples.hibernatespring.dialect;
 
 import java.sql.Types;
 
